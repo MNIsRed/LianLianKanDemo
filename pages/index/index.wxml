@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view style="display: flex; flex-direction: row;">
+  <view style="flex-grow: 1;flex-shrink: 0;width:50%;">
+    <view class="item" wx:for="{{words}}" id="question">
+      {{item}}
+    </view>
+  </view>
+  <view style="flex-grow: 1;flex-shrink: 0;width:50%;">
+    <view class="item" wx:for="{{meanings}}" id="answer">
+      {{item}}
+    </view>
+  </view>
+</view>
+
+<canvas canvas-id="locker" style="width: 100vh;height: 100vh;position: fixed;"
+bindtouchstart="touchStart"
+bindtouchmove="touchMove"
+bindtouchend="touchEnd">
+</canvas>
